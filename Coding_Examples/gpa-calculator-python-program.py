@@ -7,10 +7,14 @@ subjects = []
 while i <= total_subjects:
     # dictionary for subject
     subject = {}
+    print("====================================================")
     subject["name"] = input("Enter {} Subject Name:".format(i))
     subject["total_marks"] = int(input("Enter {} Subject Total Marks:".format(i)))
     subject["obtained_marks"] = float(input("Enter {} Subject Obtained Marks:".format(i)))
     subject["credit_hours"] = float(input("Enter {} Subject Credit Hours:".format(i)))
+    print("====================================================")
+    print()
+    print()
     subjects.append(subject)
     i = i + 1
 
@@ -42,10 +46,13 @@ for subject in subjects:
 print()
 print()
 print()
+print("============================================")
+print("=====Subjects Details With Subject GPA======")
 for subject in subjects:
     print(subject)
     print()
-
+print()
+print()
 
 for subject in subjects:
     subject["quality_points"] = subject["credit_hours"] * subject["subject_gpa"]
@@ -57,6 +64,8 @@ for subject in subjects:
     total_credit_hours = total_credit_hours + subject["credit_hours"]
     total_gpa = total_quality_points / total_credit_hours
 
+print("============================================")
+print("====Subjects Details With Quality Points====")
 for subject in subjects:
     print(subject)
     print()
